@@ -95,6 +95,12 @@ To run tests, run the following commands:
 - Linkedin: [mahamadou-nouridine](https://www.linkedin.com/in/mahamadou-nouridine)
 - Twitter: [Nouridine_Dino](https://twitter.com/Nouridine_Dino)
 
+👤 **Dieum Akonkwa**
+
+- GitHub: [@dieum512](https://github.com/dieum512/)
+- Twitter: [@dieumakonkw](https://twitter.com/dieumakonkw)
+- LinkedIn: [Dieum Akonkwa](https://www.linkedin.com/in/dieum-akonkwa/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
