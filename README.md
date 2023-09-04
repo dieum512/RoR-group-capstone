@@ -1,13 +1,13 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h3><b>Blog App</b></h3>
+  <h3><b>Recipe app</b></h3>
 </div>
 
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Blog App ](#-blog-app-)
+- [📖 Recipe app ](#-recipe-app-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -23,9 +23,10 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-# 📖 Blog App <a name="about"></a>
+# 📖 Recipe app <a name="about"></a>
 
-**Blog App** is a blog website that allow users to create, read, like, comment and browse posts.
+The **Recipe app** keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe.
+The app also allow you to make your recipes public so that you other can browse them (you can also browse public recipes).
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -40,10 +41,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- [ ] **Create post**
-- [ ] **Read post**
-- [ ] **Like a post**
-- [ ] **Comment a post**
+- [ ] **Create recipe**
+- [ ] **generate a shopping list**
+- [ ] **Make a recipe public**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -66,7 +66,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/Mahamadou-Nouridine/blog-app.git
+  git clone git@github.com:dieum512/RoR-group-capstone.git
   bundle install
 ```
 
@@ -99,7 +99,7 @@ To run tests, run the following commands:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Authentication**
+- [ ] **Ingredients Marketplace**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,7 +107,7 @@ To run tests, run the following commands:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/mahamadou-nouridine/blog-app/issues).
+Feel free to check the [issues page](https://github.com/dieum512/RoR-group-capstone/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
