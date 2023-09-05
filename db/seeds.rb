@@ -15,8 +15,8 @@ end
 
 50.times do
   Recipe.create(
-    name: Faker::Lorem.sentence(word_count: 2),
-    description: Faker::Lorem.paragraph(sentence_count: 2),
+    name: Faker::Food.dish,
+    description: Faker::Food.descriptionF,
     user: User.all.sample,
     preparation_time: Faker::Number.between(from: 1, to: 10),
     cooking_time: Faker::Number.between(from: 1, to: 10),
@@ -26,9 +26,9 @@ end
 
 50.times do
   Food.create(
-    name: Faker::Lorem.sentence(word_count: 2),
+    name: Faker::Food.ingredient,
     user: User.all.sample,
-    measurement_unit:Faker::Measurement.volume(amount: "none"),
+    measurement_unit:Faker::Food.metric_measurement,
     price: Faker::Number.between(from: 1, to: 100),
     quantity: Faker::Number.between(from: 1, to: 10),
   )
