@@ -1,5 +1,9 @@
-
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+<div class="fixed overflow-x-auto shadow-md sm:rounded-lg px-10 bg-red-300 m-auto h-full overflow-scroll">
+<div>
+<button class="btn bg-slate-400">
+Add Foof
+</button>
+</div>
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
@@ -19,9 +23,10 @@
         </thead>
         <tbody>
             <%@foods.each_with_index do |item, index| %>
-              <tr class="bg-#{} border-b dark:bg-gray-900 dark:border-gray-700">
+              <tr class="<%=index.even? ? "bg-slate-200" : "bg-white"%> border-b dark:bg-gray-900 dark:border-gray-700">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    <%=item.name%>
+                    <%=item.name%> <%= index%>
+
                 </th>
                 <td class="px-6 py-4">
                     <%=item.measurement_unit%>

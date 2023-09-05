@@ -16,7 +16,7 @@ end
 50.times do
   Recipe.create(
     name: Faker::Food.dish,
-    description: Faker::Food.descriptionF,
+    description: Faker::Food.description,
     user: User.all.sample,
     preparation_time: Faker::Number.between(from: 1, to: 10),
     cooking_time: Faker::Number.between(from: 1, to: 10),
