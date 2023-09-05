@@ -1,44 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,100;1,300&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    color: #fff;
-    font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
 }
 
 body {
-    background: url(https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3B4MTM2OTgxMy1pbWFnZS1rd3Z4eHA5MS5qcGc.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+  background: url(https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3B4MTM2OTgxMy1pbWFnZS1rd3Z4eHA5MS5qcGc.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .container {
-    padding: 3% 25%;
+  padding: 3% 25%;
 }
 
 .recipe-container {
-    display: grid;
-    gap: 30px;
+  display: grid;
+  gap: 30px;
 }
 
 .recipe-link {
-    background: #211d35;
-    opacity: 0.9;
-    padding: 30px 10%;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+  background: #211d35;
+  opacity: 0.9;
+  padding: 30px 10%;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
 
 .recipe_number_button h2 {
-    font-size: 30px;
-    color: #ec5242;
+  font-size: 30px;
+  color: #ec5242;
 }
 
 .recipe_details p {
-    font-size: 18px;
+  font-size: 18px;
 }
