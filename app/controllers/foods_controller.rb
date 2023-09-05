@@ -1,5 +1,5 @@
 class FoodsController < ApplicationController
   def index
-    @fo
+    @foods = Food.all
   end
 end
