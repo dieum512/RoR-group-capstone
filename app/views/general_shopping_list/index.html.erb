@@ -1,7 +1,7 @@
-<div class="bg-slate-500/60 flex flex-col items-center pt-5 gap-4">
+<div class="bg-slate-500/60 h-full flex flex-col items-center pt-5 gap-4">
  <h1 class="text-3xl">General Shopping List</h1>
  <div class="flex justify-between gap-5">
-  <p>Amount of food to buy: 3</p>
+  <p>Amount of food to buy: <%=@foods.count%></p>
   <p>Total value of food needed: $<%=@foods.sum(:price)%></p>
  </div>
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 max-w-[700px]">
@@ -34,4 +34,5 @@
             <% end %>
         </tbody>
     </table>
+    <p class="mx-auto mt-5"><%="There is no need to by something" if @foods.empty?%></p>
 </div>

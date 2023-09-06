@@ -1,4 +1,5 @@
-<div class="shadow-md sm:rounded-lg h-full max-w-[700px]  mx-auto flex flex-col mt-5">
+<div class="bg-slate-500/60 h-full flex flex-col items-center pt-5 gap-4">
+<div class="shadow-md sm:rounded-lg h-full max-w-[700px] w-full  mx-auto flex flex-col mt-5">
 <button type="button" class="w-[100px] self-end text-white bg-gray-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
 Add Food
 </button>
@@ -38,4 +39,6 @@ Add Food
             <% end %>
         </tbody>
     </table>
+        <p class="mx-auto mt-5"><%="There is no food" if @foods.empty?%></p>
+</div>
 </div>
