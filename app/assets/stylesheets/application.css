@@ -31,7 +31,8 @@ body {
   opacity: 0.9;
   padding: 30px 10%;
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  gap: 20px;
+  grid-template-columns: 1fr 3fr;
 }
 
 .recipe_number_button h2 {
