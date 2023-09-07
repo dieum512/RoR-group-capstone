@@ -45,10 +45,10 @@ body {
 
 /* recipe details */
 .single-recipe {
-    background: #211d35;
-    padding: 40px 8%;
-    opacity: 0.9;
-    margin-bottom: 30px;
+  background: #211d35;
+  padding: 40px 8%;
+  opacity: 0.9;
+  margin-bottom: 30px;
 }
 
 .single-recipe h2 {
@@ -59,61 +59,60 @@ body {
 }
 
 .details {
-    display: grid;
-    gap: 25px;
-    margin-bottom: 50px;
+  display: grid;
+  gap: 25px;
+  margin-bottom: 50px;
 }
 
 .prep {
-    font-size: 20px;
-    font-style: italic;
+  font-size: 20px;
+  font-style: italic;
 }
 
 .buttons {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .buttons a {
-    font-size: 18px;
-    padding: 15px 30px;
-    background: #6e57e0;
+  font-size: 18px;
+  padding: 15px 30px;
+  background: #6e57e0;
 }
 
 .table {
-    width: 100%;
+  width: 100%;
 }
 
 .table-head {
-    background: #110f1d;
+  background: #110f1d;
 }
 
 .table-head tr th {
-    font-size: 20px;
-    text-align: left;
-    padding: 10px 8px;
+  font-size: 20px;
+  text-align: left;
+  padding: 10px 8px;
 }
 
 .table-row {
-    background: #1d163f;
-    
-    opacity: 0.9;
+  background: #1d163f;
+  opacity: 0.9;
 }
 
 .table-row:nth-child(even) {
-    background: rgb(79, 72, 114);
+  background: rgb(79, 72, 114);
 }
 
 .table-row td {
-    padding: 8px;
+  padding: 8px;
 }
 
 .btn {
-    background: #6e57e0;
-    padding: 5px 8px;
-    font-style: italic;
+  background: #6e57e0;
+  padding: 5px 8px;
+  font-style: italic;
 }
 
 .btn.modify {
-    margin-right: 10px;
+  margin-right: 10px;
 }
