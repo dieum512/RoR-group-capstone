@@ -237,3 +237,16 @@ body {
   top: -5px;
   color: #0ef;
 }
+
+.all-new-recipe .submit {
+  position: relative;
+  width: 60%;
+  height: 45px;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+  background: linear-gradient(#081b29, #0ef);
+}
