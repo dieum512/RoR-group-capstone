@@ -1,5 +1,6 @@
 <div class="container-recipe">
     <div class="recipe-container">
+        <a href="/recipes/new" class="new-recipe-btn">New recipe</a>
         <% @recipes.each do |recipe|%>
             <a href="/recipes/<%= recipe.id %>" class="recipe-link">
                 <div class="recipe_number_button">
