@@ -120,50 +120,50 @@ body {
 
 /* public recipes */
 .public-recipe-title {
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .public-recipe-container {
-    display: grid;
-    gap: 30px;
+  display: grid;
+  gap: 30px;
 }
 
 .public-recipe-container a {
-    background-color: #211d35;
-    opacity: 0.9;
-    padding: 30px 10%;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 2fr 3fr;
+  background-color: #211d35;
+  opacity: 0.9;
+  padding: 30px 10%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 2fr 3fr;
 }
 
 .recipe-and-author {
-    display: grid;
-    gap: 20px;
+  display: grid;
+  gap: 20px;
 }
 
 .recipe-and-author h2 {
-    font-size: 25px;
-    font-weight: 500;
-    color: #ec5242;
+  font-size: 25px;
+  font-weight: 500;
+  color: #ec5242;
 }
 
 .recipe-and-author h6 {
-    font-size: 20px;
-    font-weight: 500;
-    font-style: italic;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
 }
 
 .item-and-price {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
 }
 
 .item-and-price p {
-    font-size: 18px;
+  font-size: 18px;
 }
