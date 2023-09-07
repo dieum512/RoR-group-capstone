@@ -1,1 +1,62 @@
-<h1>This shows a single recipe</h1>
+<div class="container-recipe">
+    <div class="single-recipe">
+        <h2>
+            <%= @recipe.name %>
+        </h2>
+        <div class="details">
+            <div class="preparation">
+                <h6 class="prep">
+                    Preparation time: <%= @recipe.preparation_time %> hours
+                </h6>
+            </div>
+            <h6 class="prep">
+                Cooking time: <%= @recipe.cooking_time %> hours
+            </h6>
+            <h6 class="prep">
+                <%= @recipe.description%>
+            </h6>
+        </div>
+        <div class="buttons">
+            <a href="#">Generate shopping list</a>
+            <a href="#">Add ingredients</a>
+        </div>
+    </div>
+
+    <table class="table">
+        <thead class="table-head">
+            <tr>
+                <th>
+                    Food
+                </th>
+                <th>
+                    Quantity
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <%@foods.each_with_index do |item, index| %>
+              <tr class="table-row">
+                <td>
+                    <%=item.name%>
+                </td>
+                <td>
+                    <%=item.quantity%> <%=item.measurement_unit%>
+                </td>
+                <td>
+                    $<%=item.price%>
+                </td>
+                <td>
+                    <a href="#" class="btn modify">Modify</a>
+                    <a href="#" class="btn">Remove</a>
+                </td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
