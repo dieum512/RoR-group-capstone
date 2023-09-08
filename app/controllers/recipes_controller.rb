@@ -2,7 +2,8 @@ class RecipesController < ApplicationController
   def index
     flash[:alert] = 'You are not connected'
     redirect_to '/public_recipes' unless user_signed_in?
-    @recipes = Recipe.all
+    return unless user_signed_in?
+    @recipes = current_user.recipes
   end
 
   def show
