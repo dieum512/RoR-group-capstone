@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
@@ -8,9 +6,9 @@ class Ability
 
     return unless user.present?
 
-    can :manage, [Recipe, Food], user: user
-    can :manage, RecipeFood, :food => {:user => user}
-    cannot :manage, [Recipe, Food], user: user
+    can(:manage, [Recipe, Food], user:)
+    can :manage, RecipeFood, food: { user: }
+    cannot :manage, [Recipe, Food], user:
     # Define abilities for the user here. For example:
     #
     #   return unless user.present?
