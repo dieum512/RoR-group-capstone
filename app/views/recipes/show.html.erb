@@ -19,7 +19,8 @@
         <%if can? :manage, @recipe%>
             <div class="buttons">
                 <a href="#">Generate shopping list</a>
-                <a href="#">Add ingredients</a>
+                <%=link_to "Add ingredients", "/recipes/#{@recipe.id}/recipe_foods/new"%>
+                <%# <a href="">Add ingredients</a> %>
             </div>
         <%end%>
     </div>
