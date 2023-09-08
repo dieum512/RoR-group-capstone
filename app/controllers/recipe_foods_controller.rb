@@ -1,6 +1,7 @@
 class RecipeFoodsController < ApplicationController
 
   def new
+    redirect_to '/public_recipes' unless user_signed_in?
     @recipe_food = RecipeFood.new
     @recipe = Recipe.find(params[:recipe_id])
   end
