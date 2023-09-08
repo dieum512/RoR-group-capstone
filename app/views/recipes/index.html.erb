@@ -2,10 +2,11 @@
     <div class="recipe-container">
         <a href="/recipes/new" class="new-recipe-btn">New recipe</a>
         <% @recipes.each do |recipe|%>
+         <% if can? :read, recipe%>
             <a href="/recipes/<%= recipe.id %>" class="recipe-link">
                 <div class="recipe_number_button">
                     <h2>
-                        <%= recipe.name %>
+                        <%= recipe.name %> <%= can? :read, recipe%>
                     </h2>
                 </div>
                 <div class="recipe_details">
@@ -14,6 +15,7 @@
                     </p>
                 </div>
             </a>
+         <% end %>
         <% end %>
     </div>
 </div>

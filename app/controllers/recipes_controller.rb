@@ -1,18 +1,28 @@
 class RecipesController < ApplicationController
   def index
-    @recipes = Recipe.all
+    flash[:alert] = 'You are not connected'
+    redirect_to '/public_recipes' unless user_signed_in?
+    return unless user_signed_in?
+
+    @recipes = current_user.recipes
   end
 
   def show
+    flash[:alert] = 'You are not connected'
+    redirect_to '/public_recipes' unless user_signed_in?
     @recipe = Recipe.find(params[:id])
     @foods = Food.all
   end
 
   def new
+    flash[:alert] = 'You are not connected'
+    redirect_to '/public_recipes' unless user_signed_in?
     @recipe = Recipe.new
   end
 
   def create
+    flash[:alert] = 'You are not connected'
+    redirect_to '/public_recipes' unless user_signed_in?
     @user = current_user
     @recipe = @user.recipes.new(recipe_params)
     if @recipe.save
