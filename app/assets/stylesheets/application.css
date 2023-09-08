@@ -232,24 +232,6 @@ body {
   transition: 0.5s;
 }
 
-.all-new-recipe input:focus ~ .label,
-.all-new-recipe input:valid ~ .label {
-  top: -5px;
-  color: #0ef;
-}
-
-.all-new-recipe .submit {
-  position: relative;
-  width: 60%;
-  height: 45px;
-  outline: none;
-  border-radius: 40px;
-  cursor: pointer;
-  font-size: 16px;
-  text-align: center;
-  font-weight: 600;
-  background: linear-gradient(#081b29, #0ef);
-}
 
 /* sign in and sign up */
 .wrapper-container {
@@ -329,6 +311,12 @@ body {
   transition: 0.5s;
 }
 
+.all-new-recipe input:focus ~ .label,
+.all-new-recipe input:valid ~ .label {
+  top: -5px;
+  color: #0ef;
+}
+
 .form-box input:focus ~ .label,
 .form-box input:valid ~ .label {
   top: -5px;
@@ -359,6 +347,19 @@ body {
   cursor: pointer;
   font-size: 16px;
   color: #fff;
+  font-weight: 600;
+  background: linear-gradient(#081b29, #0ef);
+}
+
+.all-new-recipe .submit {
+  position: relative;
+  width: 60%;
+  height: 45px;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
   font-weight: 600;
   background: linear-gradient(#081b29, #0ef);
 }
