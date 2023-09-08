@@ -16,10 +16,12 @@
                 <%= @recipe.description%>
             </h6>
         </div>
-        <div class="buttons">
-            <a href="#">Generate shopping list</a>
-            <a href="#">Add ingredients</a>
-        </div>
+        <%if can? :manage, @recipe%>
+            <div class="buttons">
+                <a href="#">Generate shopping list</a>
+                <a href="#">Add ingredients</a>
+            </div>
+        <%end%>
     </div>
 
     <table class="table">
@@ -34,27 +36,31 @@
                 <th>
                     Price
                 </th>
-                <th>
-                    Actions
-                </th>
+                <%if can? :manage, @recipe%>
+                    <th>
+                        Actions
+                    </th>
+                <%end%>
             </tr>
         </thead>
         <tbody>
             <%@foods.each_with_index do |item, index| %>
               <tr class="table-row">
                 <td>
-                    <%=item.name%>
+                    <%=item.food.name%>
                 </td>
                 <td>
-                    <%=item.quantity%> <%=item.measurement_unit%>
+                    <%=item.food.quantity%> <%=item.food.measurement_unit%>
                 </td>
                 <td>
-                    $<%=item.price%>
+                    $<%=item.food.price%>
                 </td>
-                <td>
-                    <a href="#" class="btn modify">Modify</a>
-                    <a href="#" class="btn">Remove</a>
-                </td>
+                <%if can? :manage, @recipe%>
+                    <td>
+                        <a href="#" class="btn modify">Modify</a>
+                        <a href="#" class="btn">Remove</a>
+                    </td>
+                <%end%>
             </tr>
             <% end %>
         </tbody>

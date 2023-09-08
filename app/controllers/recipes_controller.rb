@@ -11,7 +11,8 @@ class RecipesController < ApplicationController
     flash[:alert] = 'You are not connected'
     redirect_to '/public_recipes' unless user_signed_in?
     @recipe = Recipe.find(params[:id])
-    @foods = Food.all
+    # @foods = RecipeFood.includes(:food)
+    @foods  = RecipeFood.includes(:food).where(recipe: @recipe)
   end
 
   def new
