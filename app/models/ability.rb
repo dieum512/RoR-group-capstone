@@ -7,7 +7,7 @@ class Ability
     return unless user.present?
 
     can(:manage, [Recipe, Food], user:)
-    can :manage, RecipeFood, food: { user:}
+    can :manage, RecipeFood, food: { user: }
     # Define abilities for the user here. For example:
     #
     #   return unless user.present?
