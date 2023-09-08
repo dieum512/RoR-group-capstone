@@ -58,10 +58,9 @@
                 </td>
                 <%if can? :manage, @recipe%>
                     <td>
-                        <a href="#" class="btn modify">Modify</a>
-                        <%# <a href="#" class="btn">Remove</a> %>
+                        <%# <a href="#" class="btn modify">Modify</a> %>
+                        <%= link_to 'Modify',"/recipes/#{@recipe.id}/recipe_foods/#{item.id}/edit", class: 'btn modify' %>
                         <%= button_to 'Remove',recipe_recipe_food_path(@recipe,item), method: :delete, data: { confirm: 'Are you sure you want to delete this food item?' }, class: 'btn' %>
-                        <%# <%= button_to 'Remove',"/recipes/#{@recipe.id}/recipe_foods/#{item.id}", method: :delete, data: { confirm: 'Are you sure you want to delete this food item?' }, class: 'btn'  %>
 
                     </td>
                 <%end%>

@@ -12,7 +12,7 @@ class RecipesController < ApplicationController
     redirect_to '/public_recipes' unless user_signed_in?
     @recipe = Recipe.find(params[:id])
     # @foods = RecipeFood.includes(:food)
-    @foods  = RecipeFood.includes(:food).where(recipe: @recipe)
+    @foods = RecipeFood.includes(:food).where(recipe: @recipe)
   end
 
   def new

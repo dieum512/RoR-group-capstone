@@ -1,5 +1,4 @@
 class RecipeFoodsController < ApplicationController
-
   def new
     redirect_to '/public_recipes' unless user_signed_in?
     @recipe_food = RecipeFood.new
@@ -12,7 +11,7 @@ class RecipeFoodsController < ApplicationController
     food = user.foods.new(params.require(:recipe_food).permit(:name, :measurement_unit, :price, :quantity))
     if food.save
       @recipe = Recipe.find(params[:recipe_id])
-      recipe_food = RecipeFood.new(recipe: @recipe, food: food, quantity: params[:quantity])
+      recipe_food = RecipeFood.new(recipe: @recipe, food:, quantity: params[:quantity])
       if recipe_food.save
         redirect_to "/recipes/#{params[:recipe_id]}", notice: 'Food created successfully'
       else
@@ -28,9 +27,11 @@ class RecipeFoodsController < ApplicationController
   def destroy
     recipe_food = RecipeFood.find(params[:id])
     if recipe_food.destroy
-      redirect_to recipe_path(params[:recipe_id]), notice: "Recipe food deleted successfully"
+      redirect_to recipe_path(params[:recipe_id]), notice: 'Recipe food deleted successfully'
     else
-      redirect_to recipe_path(params[:recipe_id]), notice: "An error occured when deleting the Recipe food"
+      redirect_to recipe_path(params[:recipe_id]), notice: 'An error occured when deleting the Recipe food'
     end
   end
+
+  def edit; end
 end
