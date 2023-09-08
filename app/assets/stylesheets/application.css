@@ -181,7 +181,7 @@ body {
   text-align: center;
 }
 
-.wrapper-container {
+.wrapper-container1 {
   width: 100%;
   display: flex;
   align-items: center;
@@ -249,4 +249,188 @@ body {
   text-align: center;
   font-weight: 600;
   background: linear-gradient(#081b29, #0ef);
+}
+
+/* sign in and sign up */
+.wrapper-container {
+  width: 100%;
+
+  /* height: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #081b29;
+}
+
+.wraper {
+  position: relative;
+  width: 750px;
+  height: 450px;
+  background: transparent;
+  border: 2px solid #0ef;
+  box-shadow: 0 0 25px #0ef;
+  overflow: hidden;
+}
+
+.wraper .form-box {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wraper .form-box.login {
+  left: 0;
+  padding: 0 60px 0 40px;
+}
+
+.wraper .form-box.register {
+  right: 0;
+  padding: 0 40px 0 60px;
+}
+
+.form-box h2 {
+  font-size: 32px;
+  color: #fff;
+  text-align: center;
+}
+
+.form-box .field {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 18px 0;
+}
+
+.form-box .input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #fff;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.form-box .label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.form-box input:focus ~ .label,
+.form-box input:valid ~ .label {
+  top: -5px;
+  color: #0ef;
+}
+
+.form-box i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #fff;
+}
+
+.form-box .remember {
+  font-size: 16px;
+  color: #fff;
+}
+
+.submit {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  border: 2px solid #0ef;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  background: linear-gradient(#081b29, #0ef);
+}
+
+.submit:hover {
+  background: linear-gradient(#0ef, #081b29);
+}
+
+/* info text */
+.wraper .info-text {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wraper .info-text.login {
+  right: 0;
+  text-align: right;
+  padding: 0 40px 60px 150px;
+}
+
+.wraper .info-text.register {
+  top: 0;
+  left: 0;
+  text-align: left;
+  padding: 0 150px 60px 40px;
+}
+
+.info-text h2 {
+  font-size: 36px;
+  color: #fff;
+  line-height: 1.3;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.info-text p {
+  font-size: 16px;
+  color: #fff;
+}
+
+.wraper .bg-animation {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 850px;
+  height: 600px;
+  background: linear-gradient(45deg, #081b29, #0ef);
+  border-bottom: 3px solid #0ef;
+  transform: rotate(10deg) skewY(40deg);
+  transform-origin: bottom right;
+}
+
+.wraper .bg-animation2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 850px;
+  height: 550px;
+  background: linear-gradient(45deg, #081b29, #0ef);
+  border-bottom: 2px solid #0ef;
+  transform: rotate(-11deg) skewY(-41deg);
+  transform-origin: bottom left;
+}
+
+.log-out {
+  padding: 15px 40px;
+  border: none;
+  background: #6e57e0;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
