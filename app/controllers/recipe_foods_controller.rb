@@ -11,7 +11,7 @@ class RecipeFoodsController < ApplicationController
     food = user.foods.new(params.require(:recipe_food).permit(:name, :measurement_unit, :price, :quantity))
     if food.save
       @recipe = Recipe.find(params[:recipe_id])
-      recipe_food = RecipeFood.new(recipe: @recipe, food:, quantity: params[:quantity])
+      recipe_food = RecipeFood.new(recipe: @recipe, food:, quantity: params[:recipe_food][:quantity])
       if recipe_food.save
         redirect_to "/recipes/#{params[:recipe_id]}", notice: 'Food created successfully'
       else
