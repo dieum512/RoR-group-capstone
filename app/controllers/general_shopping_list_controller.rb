@@ -15,10 +15,6 @@ class GeneralShoppingListController < ApplicationController
       @recipe_foods += new_recipe_foods
     end
 
-    # recipe = Recipe.find(params[:recipe_id])
-    # @total_value = @total_value.round(2)
     @items_to_buy = @recipe_foods.count
-
-    # @foods = Food.all
   end
 end
