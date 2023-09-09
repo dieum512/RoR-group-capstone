@@ -11,7 +11,8 @@ class RecipesController < ApplicationController
     flash[:alert] = 'You are not connected'
     redirect_to '/public_recipes' unless user_signed_in?
     @recipe = Recipe.find(params[:id])
-    @foods = Food.all
+    # @foods = RecipeFood.includes(:food)
+    @foods = RecipeFood.includes(:food).where(recipe: @recipe)
   end
 
   def new
@@ -30,6 +31,26 @@ class RecipesController < ApplicationController
     else
       flash[:alert] = 'An error occured when creating the food'
       redirect_to '/recipes'
+    end
+  end
+
+  def destroy
+    @recipe = Recipe.find(params[:id])
+    @recipe.destroy
+    respond_to do |format|
+      format.html do
+        redirect_to recipes_path, notice: 'Recipe was successfully deleted.'
+      end
+    end
+  end
+
+  def update
+    @recipe = Recipe.find(params[:id])
+    @recipe.public = params[:recipe][:public] == '1'
+    if @recipe.save
+      redirect_to recipe_path(params[:id]), notice: 'Recipe made public successfully'
+    else
+      redirect_to recipe_path(params[:id]), alert: 'An error occured when making the recipe public'
     end
   end
 

@@ -1,8 +1,8 @@
-<div class="bg-slate-500/60 flex flex-col items-center pt-5 gap-4">
+<div class="bg-slate-500/60 h-full flex flex-col items-center pt-[70px] gap-4">
  <h1 class="text-3xl">General Shopping List</h1>
  <div class="flex justify-between gap-5">
-  <p>Amount of food to buy: <%=@foods.count%></p>
-  <p>Total value of food needed: $<%=@foods.sum(:price)%></p>
+  <p>Amount of food to buy: <%=@items_to_buy%></p>
+  <p>Total value of food needed: $<%=@total_value%></p>
  </div>
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 max-w-[700px]">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -19,20 +19,20 @@
             </tr>
         </thead>
         <tbody>
-            <%@foods.each_with_index do |item, index| %>
+            <%@recipe_foods.each_with_index do |item, index| %>
               <tr class="<%=index.even? ? "bg-slate-200" : "bg-white"%> border-b dark:bg-gray-900 dark:border-gray-700">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    <%=item.name%>
+                    <%=item.food.name%>
                 </th>
                 <td class="px-6 py-4 text-gray-900">
-                    <%=item.quantity%> <%=item.measurement_unit%>
+                    <%=item.quantity%> <%=item.food.measurement_unit%>
                 </td>
                 <td class="px-6 py-4 text-gray-900">
-                    $<%=item.price%>
+                    $<%=item.food.price%>
                 </td>
             </tr>
             <% end %>
         </tbody>
     </table>
-    <p class="mx-auto mt-5"><%="There is no need to by something" if @foods.empty?%></p>
+    <p class="mx-auto mt-5"><%="There is no need to by something" if @items_to_by == 0%></p>
 </div>

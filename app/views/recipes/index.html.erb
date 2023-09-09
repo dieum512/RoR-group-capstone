@@ -6,8 +6,9 @@
             <a href="/recipes/<%= recipe.id %>" class="recipe-link">
                 <div class="recipe_number_button">
                     <h2>
-                        <%= recipe.name %> <%= can? :read, recipe%>
+                        <%= recipe.name %>
                     </h2>
+                    <%=button_to "Delete" , recipe_path(recipe), method: :delete, class:"font-medium text-blue-600 dark:text-blue-500 hover:underline"%>
                 </div>
                 <div class="recipe_details">
                     <p>

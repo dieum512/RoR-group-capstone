@@ -13,6 +13,10 @@
                 <%# My Foods %>
             </li>
             <li>
+                <%= link_to "General shopping list", "/general_shopping_list"%>
+                <%# My Foods %>
+            </li>
+            <li>
                 <%# <%=link_to 'Sign in', "users/sign_out"%>
                 <%= button_to 'Sign out', destroy_user_session_path, form_class: 'px-4 py-2 border-2 border-black cursor:pointer', method: :delete %>
             </li>
