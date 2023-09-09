@@ -19,7 +19,7 @@ RSpec.describe 'Recipe #index page', type: :feature do
     @user.recipes.each do |recipe|
       expect(page).to have_content(recipe.name)
       expect(page).to have_content(recipe.description)
-    #   expect(page).to have_content('Remove')
+      #   expect(page).to have_content('Remove')
     end
   end
 
