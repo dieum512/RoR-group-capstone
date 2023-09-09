@@ -46,13 +46,12 @@ class RecipesController < ApplicationController
 
   def update
     @recipe = Recipe.find(params[:id])
-    @recipe.public = params[:recipe][:public] == "1"
+    @recipe.public = params[:recipe][:public] == '1'
     if @recipe.save
-      redirect_to recipe_path(params[:id]), notice: "Recipe made public successfully"
+      redirect_to recipe_path(params[:id]), notice: 'Recipe made public successfully'
     else
-      redirect_to recipe_path(params[:id]), alert: "An error occured when making the recipe public"
+      redirect_to recipe_path(params[:id]), alert: 'An error occured when making the recipe public'
     end
-
   end
 
   private
