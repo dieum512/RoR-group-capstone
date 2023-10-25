@@ -1,0 +1,25 @@
+<div class="container-recipe">
+    <h2 class="public-recipe-title">Public recipes</h2>
+        <div class="public-recipe-container">
+            <% @recipes.each do |recipe| %>
+                <a href="/recipes/<%= recipe.id %>">
+                    <div class="recipe-and-author">
+                        <h2>
+                            <%= recipe.name %>
+                        </h2>
+                        <h6>
+                            By: <%= recipe.user.name %>
+                        </h6>
+                    </div>
+                    <div class="item-and-price">
+                        <p>
+                            Total food items: <%= recipe.recipe_foods.count %>
+                        </p>
+                        <p>
+                            Total price: $<%= recipe.recipe_foods.joins(:food).sum("foods.price * recipe_foods.quantity") %>
+                        </p>
+                    </div>
+                </a>
+            <% end %>
+        </div>
+</div>

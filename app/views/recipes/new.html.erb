@@ -1,0 +1,38 @@
+<div class="wrapper-container1">
+<div class="all-new-recipe">
+    <h2 class="create-title">Create a recipe</h2>
+    <div class="new-recipe-form">
+        <%= form_with model: @recipe do |f| %>
+            <div class=form>
+                <%= f.text_field :name, class: "input" %>
+                <%= f.label :name, class: "label" %>
+            </div>
+
+            <div class=form>
+                <%= f.number_field :preparation_time, class: "input" %>
+                <%= f.label :preparation_time, class: "label" %>
+            </div>
+
+            <div class=form>
+                <%= f.number_field :cooking_time, class: "input" %>
+                <%= f.label :cooking_time, class: "label" %>
+            </div>
+
+            <div class=form>
+                <%= f.text_field :description, class: "input" %>
+                <%= f.label :description, class: "label" %>
+            </div>
+
+            <div class=form>
+                <%= f.check_box :public %>
+                <%= f.label :public %>
+            </div>
+
+            <div class="submit">
+                <%= f.submit class: "submit" %>
+            </div>
+
+        <% end %>
+    </div>
+</div>
+</div>

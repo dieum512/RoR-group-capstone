@@ -1,0 +1,26 @@
+<nav class="bg-slate-400 fixed z-20 w-full">
+    <ul class="m-2 flex gap-5 items-center">
+        <li>
+            <%= link_to "Public recipes", "/public_recipes", class: 'px-4 py-2 border-black cursor:pointer'  %>
+        </li>
+        <%if user_signed_in?%>
+            <li>
+                <%= link_to "My recipes", recipes_path%>
+                <%# My recipes %>
+            </li>
+            <li>
+                <%= link_to "My Foods", foods_path%>
+            </li>
+            <li>
+                <%= button_to 'Sign out', destroy_user_session_path, form_class: 'px-4 py-2 border-2 border-black cursor:pointer', method: :delete %>
+            </li>
+        <%else%>
+        <li>
+            <%= link_to "Sign in", new_user_session_path, class: 'px-4 py-2 border-2 border-black cursor:pointer'  %>
+        </li>
+        <li>
+            <%= link_to "Sign up", new_user_registration_path, class: 'px-4 py-2 border-2 border-black cursor:pointer'  %>
+        </li>
+        <%end%>
+    </ul>
+</nav>

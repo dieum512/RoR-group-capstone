@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RoRGroupCapstone</title>
+    <script
+      src="https://kit.fontawesome.com/3a9cdac541.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+    <%= render 'shared/navbar' %>
+    <%# flash.each do |type, msg| %>
+      <%# <div class="z-10 top-[30px] p-4 w-[400px] mb-4 text-sm text-slate-800 rounded-lg bg-white/60 dark:bg-gray-800 dark:text-green-400 fixed" role="alert">
+        <%=msg%>
+      <%# </div>  %>
+    <%# end %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <main class="mx-auto relative h-full">
+      <%= yield %>
+    </main>
+  </body>
+</html>
